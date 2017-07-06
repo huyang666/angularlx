@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular</title>
+	<style>
+		.red{
+			color:#fff;
+			background:red;
+		}
+		.blue{
+			color:#fff;
+			background:blue;
+		}
+		.yellow{
+			color:#fff;
+			background:yellow;
+		}
+		.green{
+			color:#fff;
+			background:green;
+		}
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="loginControl">
+		<input type="text" ng-model="username">
+		<input type="button" value="提交" ng-click="show()">
+		<h1>my name's {{username}}</h1>
+	</div>
+	<div ng-init="mytext='123123'"></div>
+	<p ng-bind="mytext"></p>
+	<div ng-controller="myColor">
+		<select ng-model='cor'>
+			<option ng-repeat="color in records">{{color}}</option>
+		</select>
+		<h2 ng-class="cor">hellow world!!</h2>
+	</div>
+	
+
+
+
+
+
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/gulpfile.js"></script>
+</body>
+</html>
